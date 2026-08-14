@@ -1,5 +1,3 @@
-import "./Services.css";
-
 function Services() {
   return (
     <section className="services-section" id="services">
@@ -7,7 +5,7 @@ function Services() {
         <h2>Our Services</h2>
 
         <div className="services-grid">
-
+          
           {/* Credit Cards */}
           <div className="service-card">
             <h3>💳 Credit Cards</h3>
@@ -45,8 +43,8 @@ function Services() {
             <h3>Get Free Consultation</h3>
 
             <p>
-              Share your details and our team will help you choose the
-              right financial solution.
+              Share your details and our team will help you choose the right
+              financial solution.
             </p>
 
             <a href="#contact" className="service-btn">
