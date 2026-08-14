@@ -93,13 +93,11 @@ export default function LeadForm() {
           >
             <option value="">Select Service</option>
 
-            <option value="Term & Health Insurance">
-              Term & Health Insurance
-            </option>
+            <option value="Insurance">Insurance</option>
 
-            <option value="Credit Card">
-              Credit Card
-            </option>
+            <option value="Credit Card">Credit Card</option>
+
+            <option value="Loans">Loans</option>
           </select>
 
           <button type="submit">
