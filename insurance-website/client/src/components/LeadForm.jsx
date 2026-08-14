@@ -10,10 +10,10 @@ export default function LeadForm() {
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value,
-    }));
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -93,11 +93,17 @@ export default function LeadForm() {
           >
             <option value="">Select Service</option>
 
-            <option value="Insurance">Insurance</option>
+            <option value="Credit Cards">
+              Credit Cards
+            </option>
 
-            <option value="Credit Card">Credit Card</option>
+            <option value="Insurance">
+              Insurance
+            </option>
 
-            <option value="Loans">Loans</option>
+            <option value="Loans">
+              Loans
+            </option>
           </select>
 
           <button type="submit">
