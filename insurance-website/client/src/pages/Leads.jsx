@@ -13,8 +13,7 @@ function Leads() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/leads"
-      );
+"https://insurance-website-nwtt.onrender.com/api/leads"      );
 
       const data = await response.json();
 
@@ -42,8 +41,7 @@ function Leads() {
   const updateStatus = async (leadId, newStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/leads/${leadId}/status`,
-        {
+`https://insurance-website-nwtt.onrender.com/api/leads/${leadId}`        {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
