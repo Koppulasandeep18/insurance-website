@@ -15,6 +15,7 @@ function Footer() {
         <h3>Our Services</h3>
         <p>Credit Cards</p>
         <p>Term Insurance</p>
+        <p>Loans</p>
       </div>
 
       <div>
