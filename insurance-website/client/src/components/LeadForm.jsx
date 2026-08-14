@@ -92,9 +92,14 @@ export default function LeadForm() {
             required
           >
             <option value="">Select Service</option>
-            <option value="Term Insurance">Term Insurance</option>
-            <option value="Health Insurance">Health Insurance</option>
-            <option value="Credit Card">Credit Card</option>
+
+            <option value="Term & Health Insurance">
+              Term & Health Insurance
+            </option>
+
+            <option value="Credit Card">
+              Credit Card
+            </option>
           </select>
 
           <button type="submit">
