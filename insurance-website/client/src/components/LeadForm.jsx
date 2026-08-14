@@ -23,7 +23,7 @@ export default function LeadForm() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/leads",
+        "https://insurance-website-nwtt.onrender.com/api/leads",
         {
           method: "POST",
           headers: {
@@ -36,7 +36,9 @@ export default function LeadForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage("Callback request submitted successfully! We will contact you soon.");
+        setMessage(
+          "Callback request submitted successfully! We will contact you soon."
+        );
 
         setFormData({
           name: "",
@@ -90,15 +92,9 @@ export default function LeadForm() {
             required
           >
             <option value="">Select Service</option>
-            <option value="Term Insurance">
-              Term Insurance
-            </option>
-            <option value="Health Insurance">
-              Health Insurance
-            </option>
-            <option value="Credit Card">
-              Credit Card
-            </option>
+            <option value="Term Insurance">Term Insurance</option>
+            <option value="Health Insurance">Health Insurance</option>
+            <option value="Credit Card">Credit Card</option>
           </select>
 
           <button type="submit">
