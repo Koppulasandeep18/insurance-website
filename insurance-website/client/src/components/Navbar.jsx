@@ -1,30 +1,42 @@
-import { Link } from "react-router-dom";
-
 function Navbar() {
   return (
-    <nav className="navbar">
-      {/* Padma Brand */}
-      <div className="logo">
-        <span className="padma-name">Padma</span>
-        <small>FINANCIAL SERVICES</small>
+    <>
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="top-bar-content">
+          <span>Trusted Financial Guidance For Better Decisions</span>
+
+          <div className="top-contact">
+            <span>📞 +91 95818 65754</span>
+            <span>✉️ padmafinancialservices@gmail.com</span>
+          </div>
+        </div>
       </div>
 
-      {/* Navigation */}
-      <div className="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#services">SERVICES</a>
-        <a href="#contact">CONTACT US</a>
+      {/* Main Navbar */}
+      <header className="navbar">
+        <a href="#home" className="brand">
+          <div className="brand-icon">P</div>
 
-        <Link to="/dashboard">
-          DASHBOARD
-        </Link>
-      </div>
+          <div>
+            <h2>PADMA</h2>
+            <span>FINANCIAL SERVICES</span>
+          </div>
+        </a>
 
-      {/* Consultation Button */}
-      <a href="#contact" className="nav-button">
-        GET FREE CONSULTATION
-      </a>
-    </nav>
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#process">How It Works</a>
+        </nav>
+
+        <a href="#contact" className="nav-button">
+          Get Free Consultation →
+        </a>
+      </header>
+    </>
   );
 }
 

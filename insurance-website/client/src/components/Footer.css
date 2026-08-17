@@ -1,0 +1,152 @@
+/* =========================================
+   PREMIUM FOOTER
+========================================= */
+
+.premium-footer {
+  background: #0d2340;
+  color: #ffffff;
+  padding: 75px 8% 25px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+/* BRAND */
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-logo span {
+  color: #5b8def;
+}
+
+.footer-brand p {
+  max-width: 310px;
+  color: #aebed1;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-small {
+  margin-top: 15px;
+}
+
+/* COLUMNS */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h4 {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.footer-column > a {
+  margin-bottom: 13px;
+  color: #aebed1;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-column > a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer-column p {
+  margin-bottom: 18px;
+  color: #aebed1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* CONTACT BUTTON */
+
+.footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.footer-contact-btn:hover {
+  background: #ffffff;
+  color: #173863 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-bottom p,
+.footer-bottom-links a {
+  color: #8092aa;
+  font-size: 12px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .premium-footer {
+    padding: 60px 6% 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}

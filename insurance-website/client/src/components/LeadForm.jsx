@@ -1,9 +1,11 @@
 import { useState } from "react";
+import "./LeadForm.css";
 
-export default function LeadForm() {
+function LeadForm() {
   const [formData, setFormData] = useState({
     name: "",
-    mobile: "",
+    phone: "",
+    email: "",
     service: "",
   });
 
@@ -16,107 +18,176 @@ export default function LeadForm() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    setMessage("Submitting...");
+    setMessage(
+      "Thank you! Our team will get in touch with you soon."
+    );
 
-    try {
-      const response = await fetch(
-        "https://insurance-website-nwtt.onrender.com/api/leads",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage(
-          "Callback request submitted successfully! We will contact you soon."
-        );
-
-        setFormData({
-          name: "",
-          mobile: "",
-          service: "",
-        });
-      } else {
-        setMessage(data.message || "Something went wrong!");
-      }
-    } catch (error) {
-      console.error("Lead Form Error:", error);
-      setMessage("Server connection failed!");
-    }
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+    });
   };
 
   return (
-    <section className="lead-form-section" id="contact">
-      <div className="form-container">
-        <div className="form-info">
-          <h2>Get Free Consultation</h2>
+    <section className="lead-premium" id="contact">
+      <div className="lead-container">
+
+        {/* LEFT CONTENT */}
+        <div className="lead-info">
+          <span className="lead-tag">GET STARTED</span>
+
+          <h2>
+            Let's Find the Right
+            <span> Financial Solution.</span>
+          </h2>
 
           <p>
-            Share your details and our team will help you choose the right
-            financial solution for your needs.
+            Looking for a Credit Card, Loan or Insurance? Share your details
+            and our team will help you understand the available options.
           </p>
+
+          <div className="lead-points">
+
+            <div className="lead-point">
+              <div className="lead-point-icon">✓</div>
+
+              <div>
+                <h4>Credit Cards</h4>
+                <p>
+                  Explore credit card options based on your requirements.
+                </p>
+              </div>
+            </div>
+
+            <div className="lead-point">
+              <div className="lead-point-icon">✓</div>
+
+              <div>
+                <h4>Loans</h4>
+                <p>
+                  Get guidance to understand suitable loan options.
+                </p>
+              </div>
+            </div>
+
+            <div className="lead-point">
+              <div className="lead-point-icon">✓</div>
+
+              <div>
+                <h4>Insurance</h4>
+                <p>
+                  Understand insurance options for your needs.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <form className="lead-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        {/* FORM */}
+        <div className="lead-form-card">
 
-          <input
-            type="tel"
-            name="mobile"
-            placeholder="Mobile Number"
-            value={formData.mobile}
-            onChange={handleChange}
-            required
-          />
+          <div className="lead-form-header">
+            <h3>Request a Free Consultation</h3>
 
-          <select
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Service</option>
-
-            <option value="Credit Cards">
-              Credit Cards
-            </option>
-
-            <option value="Insurance">
-              Insurance
-            </option>
-
-            <option value="Loans">
-              Loans
-            </option>
-          </select>
-
-          <button type="submit">
-            Request a Callback
-          </button>
-
-          {message && (
-            <p className="form-message">
-              {message}
+            <p>
+              Fill in your details and we'll get back to you.
             </p>
-          )}
-        </form>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="premium-lead-form"
+          >
+
+            <div className="form-group">
+              <label>Full Name</label>
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Phone Number</label>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label>Email Address</label>
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="form-group">
+              <label>I'm Interested In</label>
+
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select a service</option>
+
+                <option value="Credit Card">
+                  Credit Cards
+                </option>
+
+                <option value="Loan">
+                  Loans
+                </option>
+
+                <option value="Insurance">
+                  Insurance
+                </option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              className="lead-submit-btn"
+            >
+              Request Free Consultation
+              <span>→</span>
+            </button>
+
+            {message && (
+              <p className="lead-success-message">
+                ✓ {message}
+              </p>
+            )}
+
+          </form>
+        </div>
+
       </div>
     </section>
   );
 }
+
+export default LeadForm;

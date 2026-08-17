@@ -1,46 +1,93 @@
 function Hero() {
   return (
-    <section className="hero" id="home">
-      <div className="hero-content">
+    <section className="premium-hero" id="home">
+      <div className="hero-left">
+
+        <div className="hero-badge">
+          ✦ TRUSTED FINANCIAL GUIDANCE
+        </div>
+
         <h1>
-          Secure Your <span>Future</span> Today
+          Your Financial Journey,
+          <span> Guided With Confidence.</span>
         </h1>
 
         <p>
-          Get expert guidance for Term Insurance, Health Insurance,
-          and Credit Cards with Padma Financial Services.
+          We simplify financial decisions and help you discover the right
+          options for Credit Cards, Health Insurance, Term Insurance and Loans.
         </p>
 
-        <a href="#contact" className="btn btn-primary">
-          Get Free Consultation
-        </a>
+        <div className="hero-buttons">
+          <a href="#contact" className="hero-primary">
+            Get Free Consultation →
+          </a>
 
-        <div className="hero-features">
-          <div className="hero-feature">
-            <div className="hero-feature-icon">🛡️</div>
+          <a href="#services" className="hero-secondary">
+            Explore Services
+          </a>
+        </div>
 
-            <div>
-              <h4>Trusted Guidance</h4>
-              <p>Simple and reliable financial assistance.</p>
-            </div>
+        <div className="hero-trust">
+          <div>
+            <strong>500+</strong>
+            <span>Happy Customers</span>
           </div>
 
-          <div className="hero-feature">
-            <div className="hero-feature-icon">🤝</div>
+          <div>
+            <strong>4+</strong>
+            <span>Financial Services</span>
+          </div>
 
-            <div>
-              <h4>Personal Support</h4>
-              <p>Get assistance based on your requirements.</p>
-            </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Customer Support</span>
           </div>
         </div>
+
       </div>
 
-      <div className="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
-          alt="Financial Planning"
-        />
+      <div className="hero-right">
+
+        <div className="hero-glow"></div>
+
+        <div className="financial-card main-card">
+          <div className="card-icon">📊</div>
+          <p>SMART FINANCIAL</p>
+          <h3>Better Decisions Start Here</h3>
+
+          <div className="mini-chart">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div className="floating-card card-one">
+          <span className="float-icon">🛡️</span>
+          <div>
+            <strong>Secure Future</strong>
+            <p>Insurance Guidance</p>
+          </div>
+        </div>
+
+        <div className="floating-card card-two">
+          <span className="float-icon">💳</span>
+          <div>
+            <strong>Smart Choices</strong>
+            <p>Credit Card Advisory</p>
+          </div>
+        </div>
+
+        <div className="floating-card card-three">
+          <span className="float-icon">🏠</span>
+          <div>
+            <strong>Right Solutions</strong>
+            <p>Loan Assistance</p>
+          </div>
+        </div>
+
       </div>
     </section>
   );
