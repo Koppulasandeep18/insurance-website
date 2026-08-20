@@ -18,7 +18,7 @@ function Login() {
 
     try {
       const response = await fetch(
-"https://insurance-website-nwtt.onrender.com",        {
+"https://insurance-website-nwtt.onrender.com/",        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
