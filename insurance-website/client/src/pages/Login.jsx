@@ -18,7 +18,8 @@ function Login() {
 
     try {
       const response = await fetch(
-"https://insurance-website-nwtt.onrender.com/",        {
+        "https://insurance-website-nwtt.onrender.com/api/auth/login",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -90,7 +91,6 @@ function Login() {
           </div>
 
           <form onSubmit={handleSubmit}>
-
             <div className="login-group">
               <label>Email Address</label>
 
@@ -120,9 +120,8 @@ function Login() {
                 style={{
                   marginBottom: "15px",
                   fontSize: "14px",
-                  color: message === "Login successful!"
-                    ? "green"
-                    : "red",
+                  color:
+                    message === "Login successful!" ? "green" : "red",
                 }}
               >
                 {message}
@@ -137,7 +136,6 @@ function Login() {
               {loading ? "Logging in..." : "Login to Dashboard"}
               <span>→</span>
             </button>
-
           </form>
         </div>
 
